@@ -1,0 +1,16 @@
+name: Simple Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v3
+
+      - name: Afficher un message
+        run: echo "Pipeline exécuté avec succès !"
